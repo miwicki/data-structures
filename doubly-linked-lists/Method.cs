@@ -155,6 +155,7 @@ namespace Methods
             else if (Runner.Next == null)
             {
                 Runner.Prev.Next = null;
+                Runner.Prev = null;
             }
 
             else

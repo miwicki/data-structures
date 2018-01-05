@@ -100,10 +100,7 @@ namespace Methods
                 {
                     Runner = Runner.Next;
                 }
-                else
-                {
-                    return;
-                }
+            
             }
             newNode.Next = Runner.Next;
 
@@ -131,10 +128,7 @@ namespace Methods
                 {
                     Runner = Runner.Next;
                 }
-                else
-                {
-                    return;
-                }
+               
             }
 
             if (Counter == 1)

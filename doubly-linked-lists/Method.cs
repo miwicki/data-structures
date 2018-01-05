@@ -71,10 +71,7 @@ namespace Methods
                 {
                     Runner = Runner.Next;
                 }
-                else
-                {
-                    return;
-                }
+            
             }
 
             newNode.Next = Runner.Next;

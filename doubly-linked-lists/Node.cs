@@ -7,14 +7,10 @@ namespace Nodes
 
     public class Node
     {
+        public object Value { get; set; }
 
-        public int Value { get; set; }
-        internal Node Next { get; set; }
-        internal Node Prev { get; set; }
+        public Node Next { get; set; }
 
-        public Node(int val)
-        {
-            Value = val;
-        }
+        public Node Prev { get; set; }
     }
 }

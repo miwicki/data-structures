@@ -78,9 +78,9 @@ namespace Methods
                 }
             }
 
-            Current.Next.Prev = newNode;
-
             newNode.Next = Current.Next;
+
+            Current.Next.Prev = newNode;
 
             Current.Next = newNode;
 

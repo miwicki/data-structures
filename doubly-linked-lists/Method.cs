@@ -120,5 +120,53 @@ namespace Methods
             Counter++;
         }
 
+        public void Remove(Node targetNode)
+        {
+            if (Head == null)
+            {
+                return;
+            }
+
+            Node Current = Head;
+
+            while (Current != targetNode)
+            {
+                if (Current.Next != null)
+                {
+                    Current = Current.Next;
+                }
+                else
+                {
+                    return;
+                }
+            }
+
+            if (Counter == 1)
+            {
+                Head = null;
+            }
+
+            else if (Current.Prev == null)
+            {
+                Head = Current.Next;
+                Current.Next.Prev = null;
+            }
+
+            else if (Current.Next == null)
+            {
+                Current.Prev.Next = null;
+            }
+
+            else
+            {
+                Current.Prev.Next = Current.Next;
+                Current.Next.Prev = Current.Prev;
+            }
+
+            Current = null;
+            Counter--;
+
+        }
     }
 }
+

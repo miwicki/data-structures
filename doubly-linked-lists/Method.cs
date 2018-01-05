@@ -7,15 +7,14 @@ namespace Methods
     class Methods
     {
         public Node Head { get; set; }
-        private int Counter { get; set; }
+        public int Counter { get; set; }
 
-        public Methods(Node node)
+        public DoublyLinkList(object value)
         {
+            Node node = new Node(value = value, Prev = null, Next = null);
             Head = node;
-
-            Counter = 1;
+            Runner = Head;
         }
-
         
         public void AddFirst(Node first)
         {

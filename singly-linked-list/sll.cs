@@ -20,3 +20,22 @@ namespace CodeChallenges.Week_02
             Head = newNode;
             return;
         }
+
+        public void AddLast(int value)
+        {
+            SLLNode newNode = new SLLNode();
+            if (Head == null)
+            {
+                Head = newNode;
+                return;
+            }
+
+            SLLNode current = Head;
+
+            while (current.Next != null)
+            {
+                current = current.Next;
+            }
+
+            current.Next = newNode;
+        }

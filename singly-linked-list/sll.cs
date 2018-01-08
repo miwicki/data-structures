@@ -110,3 +110,37 @@ namespace CodeChallenges.Week_02
             }
             Console.WriteLine("node not found");
         }
+
+        public void RemoveNode(int targetedValue)
+        {
+            if (Head != null)
+            {
+                Console.WriteLine("Head is not found");
+                return;
+            }
+
+            if (Head.Value == targetedValue)
+            {
+                Head = Head.Next;
+                return;
+            }
+            if (Head.Next != null)
+            {
+                SLLNode current = Head.Next;
+                SLLNode prev = Head;
+                while (current != null)
+                {
+                    if (current.Value == targetedValue)
+                    {
+                        SLLNode temp = current.Next;
+                        current = null;
+                        prev.Next = temp;
+                        return;
+                    }
+                    current = current.Next;
+                    prev = prev.Next;
+                }
+            }
+
+            Console.WriteLine("node not found");
+        }

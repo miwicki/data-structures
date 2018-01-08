@@ -144,3 +144,41 @@ namespace CodeChallenges.Week_02
 
             Console.WriteLine("node not found");
         }
+
+        public SLLNode FindMiddle()
+        {
+            SLLNode midNode = Head;
+            SLLNode lastNode = Head;
+
+            while (lastNode.Next != null && lastNode.Next.Next != null)
+            {
+                midNode = midNode.Next;
+                lastNode = lastNode.Next.Next;
+                Console.WriteLine($"{midNode} is the middle value for the SLL");
+            }
+
+            return midNode;
+
+        }
+
+        //find Nth from the end
+        public SLLNode FindNthFromLast(int n)
+        {
+            SLLNode walker = Head;
+            SLLNode sleeper = Head;
+            int counter = 1;
+
+            while (walker.Next != null)
+            {
+                if (counter >= n)
+                {
+                    sleeper = sleeper.Next;
+                }
+                walker = walker.Next;
+                counter++;
+                Console.WriteLine("");
+            }
+            return sleeper;
+        }
+    }
+}

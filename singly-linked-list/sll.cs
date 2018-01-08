@@ -75,3 +75,38 @@ namespace CodeChallenges.Week_02
                 return;
             }
         }
+
+        public void AddAfter(int value, int targetedValue)
+        {
+            if (Head == null)
+            {
+                Console.WriteLine("Head is null");
+                return;
+            }
+
+            SLLNode newNode = new SLLNode();
+            if (Head.Value == targetedValue)
+            {
+                newNode.Next = Head;
+                Head = newNode;
+                return;
+            }
+
+            if (Head.Next != null)
+            {
+                SLLNode current = Head.Next;
+                SLLNode previous = Head;
+                while (previous != null)
+                {
+                    if (previous.Value == targetedValue)
+                    {
+                        previous.Next = newNode;
+                        newNode.Next = current;
+                        return;
+                    }
+                    current = current.Next;
+                    previous = previous.Next;
+                }
+            }
+            Console.WriteLine("node not found");
+        }

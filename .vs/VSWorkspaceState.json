@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\remove-node",
+    "\\remove-node\\remove-node",
+    "\\stacks-and-queues"
   ],
+  "SelectedNode": "\\stacks-and-queues\\stack.cs",
   "PreviewInSolutionExplorer": false
 }
